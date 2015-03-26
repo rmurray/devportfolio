@@ -1,165 +1,45 @@
 <!DOCTYPE html>
-<html>
-
+<html data-ng-app="index">
 <head>
 	<meta charset="utf-8">
 	<title>Portfolio | Ryan Murray</title>
 	<meta name="description" content="A place to demonstrate professional experience." >
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+
+<body class="" data-ng-controller="main"> <!-- me samp homey -->
+	<div class="wrapper">
+		<div class="siteheader">
+			<div class="displayInline">
+				<div class="logo sprite">
+				</div><div class="logoText orbitron">ryan murray</div>
+			</div>
+			<a href="https://plus.google.com/106139086974881828865/posts" target="_blank" class="sprite socialIcon gplus"></a>
+			<a href="mailto:rmurray3420@gmail.com" target="_blank" class="sprite socialIcon mail"></a>
+			<a href="https://www.linkedin.com/in/murrayryan/" target="_blank" class="sprite socialIcon li"></a>
+		</div>
+		<div class="clear"></div>
+		
+		<div class="container body-content app-container">
+			<div ng-view></div>
+		</div>
+		
+		<footer>
+			You have reached the bottom... <a href="#/home">now go home</a>
+		</footer>
+	</div> <!-- //wrapper -->
+	
 	<link rel="stylesheet" type="text/css" href="portfolio.css"></link>
 	<link rel="stylesheet" type="text/css" href="jquery-ui-1.11.0/jquery-ui.min.css" />
 	<link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="jquery-1.11.1/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="jquery-ui-1.11.0/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="portfolio.js"></script>
-</head>
-
-
-<body>
-	<div class="wrapper">
-		<header>
-			<div class="logo sprite floatLeft"></div><div class="logoText orbitron floatLeft">ryan murray</div>
-			<a href="https://plus.google.com/106139086974881828865/posts" target="_blank" class="sprite socialIcon gplus"></a>
-			<a href="mailto:rmurray3420@gmail.com" target="_blank" class="sprite socialIcon mail"></a>
-			<a href="https://www.linkedin.com/in/murrayryan/" target="_blank" class="sprite socialIcon li"></a>
-		</header>
-		
-		<div class="content">
-			<div class="nav"></div>
-			<div class="summary">
-				This is just a little page I created to show some of the work that I have done.<br>
-				You may even say it is in and of itself a way to show off.
-			</div>
-			<div class="siteContainer desktop" data-transition="parent">
-				<h2 class="pointer" data-transition="dropdown" onclick="toggleTranslate($(this));">Campus Colors</h2>
-				<div class="responsiveIconCont">
-					<div class="deskIcon sprite" data-transition="desktop" data-remove="desktop|tablet|mobile" onclick="toggleGroup($(this));"></div>
-					<div class="tabletIcon sprite" data-transition="tablet" data-remove="desktop|tablet|mobile" onclick="toggleGroup($(this));"></div>
-					<div class="mobileIcon sprite" data-transition="mobile" data-remove="desktop|tablet|mobile" onclick="toggleGroup($(this));"></div>
-				</div>
-				<div class="deskSample">
-					<div class="hideImg">
-						<a href="http://www.campuscolors.com" target="_blank">
-							<img class="fluidImg" src="./images/cc-home-desk-full.jpg">
-						</a>
-					</div>
-				</div>
-				<div class="tabletSample">
-					<div class="hideImg">
-						<a href="http://www.campuscolors.com" target="_blank">
-							<img class="fluidImg" src="./images/cc-home-tab-full.jpg">
-						</a>
-					</div>
-				</div>
-				<div class="mobileSample">
-					<div class="hideImg">
-						<a href="http://www.campuscolors.com" target="_blank">
-							<img class="fluidImg" src="./images/cc-mobile-home-full.jpg">
-						</a>
-					</div>
-				</div>
-				<div class="descriptionCont">
-					<ul>
-						<li><span>Client: </span>Campus Colors</li>
-						<li><span>Business Type: </span>Sporting Apparel</li>
-						<li><span>Skills: </span>Elastic Search, Responsive HTML/CSS, JQuerry, JSON, Carousels</li>
-					</ul>
-					<div class="horizSeperate"></div>
-					<div class="description">
-						<p>
-							A responsive implimentation was used to enable this application to change views based on the screen size of the device 
-							it was displayed on. CSS media queries for screen sizes at 320px &#40;mobile phone&#41;, 768px &#40;tablet&#41;, 
-							960px &#40;small desktop&#41;, and 1080 &#40;large desktop&#41; allowed break points which allowed for the application 
-							to conform to the different screen sizes. 
-						</p>
-						<p>
-							This application also used an Elastic Search based solution in place of a category structure. Searchable attributes were 
-							added to products to indicate possible associations that they possesed. Using customizable JSON filters in place of 
-							categories allowed for new pages to be created quickly and simply without the need to populate a category. All that was 
-							needed was to indicate which product attributes should be included in the search result, along with a bit of data such as 
-							meta description&#47;title, and a page heading and&#47;or banner image. 
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="siteContainer desktop" data-transition="parent">
-				<h2 class="pointer" data-transition="dropdown" onclick="toggleTranslate($(this));">Beachmall</h2>
-				<div class="responsiveIconCont emptyIconCont"></div>
-				<div class="hideImg">
-					<a href="http://www.beachmall.com" target="_blank">
-						<img class="fluidImg" src="./images/beach-home-desk-full.jpg">
-					</a>
-				</div>
-			</div>
-			<div class="siteContainer desktop" data-transition="parent">
-				<h2 class="pointer" data-transition="dropdown" onclick="toggleTranslate($(this));">Bikinimo</h2>
-				<div class="responsiveIconCont emptyIconCont"></div>
-				<div class="hideImg">
-					<a href="http://app.bikinimo.com" target="_blank">
-						<img class="fluidImg" src="./images/bikinimo-home-desk-full.jpg">
-					</a>
-				</div>
-			</div>
-			<div class="siteContainer desktop" data-transition="parent">
-				<h2 class="pointer" data-transition="dropdown" onclick="toggleTranslate($(this));">NYC I Wear</h2>
-				<div class="responsiveIconCont">
-					<div class="deskIcon sprite" data-transition="desktop" data-remove="desktop|tablet|mobile" onclick="toggleGroup($(this));"></div>
-					<div class="tabletIcon sprite" data-transition="tablet" data-remove="desktop|tablet|mobile" onclick="toggleGroup($(this));"></div>
-				</div>
-				<div class="deskSample">
-					<div class="hideImg">
-						<a href="http://www.nyciwear.zoovy.com">
-							<img class="fluidImg" src="./images/nyci-home-desk-full.jpg">
-						</a>
-					</div>
-				</div>
-				<div class="tabletSample">
-					<div class="hideImg">
-						<a href="http://www.nyciwear.zoovy.com">
-							<img class="fluidImg" src="./images/nyci-home-tab-full.jpg">
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="siteContainer desktop" data-transition="parent">
-				<h2 class="pointer" data-transition="dropdown" onclick="toggleTranslate($(this));">The Sev</h2>
-				<div class="responsiveIconCont">
-					<div class="deskIcon sprite" data-transition="desktop" data-remove="desktop|tablet|mobile" onclick="toggleGroup($(this));"></div>
-					<div class="tabletIcon sprite" data-transition="tablet" data-remove="desktop|tablet|mobile" onclick="toggleGroup($(this));"></div>
-					<div class="mobileIcon sprite" data-transition="mobile" data-remove="desktop|tablet|mobile" onclick="toggleGroup($(this));"></div>
-				</div>
-				<div class="deskSample">
-					<div class="hideImg">
-						<img class="fluidImg" src="./images/sev-home-desk-full.jpg">
-					</div>
-				</div>
-				<div class="tabletSample">
-					<div class="hideImg">
-						<img class="fluidImg" src="./images/sev-home-tablet-full.jpg">
-					</div>
-				</div>
-				<div class="mobileSample">
-					<div class="hideImg">
-						<img class="fluidImg" src="./images/sev-home-mobile-full.jpg">
-					</div>
-				</div>
-			</div>
-			<div class="siteContainer desktop" data-transition="parent">
-				<h2 class="pointer" data-transition="dropdown" onclick="toggleTranslate($(this));">Quality Overstock</h2>
-				<div class="responsiveIconCont emptyIconCont"></div>
-				<div class="hideImg">
-					<a href="http://app.qualityoverstock.com" target="_blank">
-						<img class="fluidImg" src="./images/qos-home-desk-full.jpg">
-					</a>
-				</div>
-			</div>
-		</div>
-		
-		
-		<footer>
-			This is where your footer stink.
-		</footer>
-	</div> <!-- //wrapper -->
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="angular-route.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	
 </body>
 
 </html>

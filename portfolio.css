@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-.mePage, .content, .landing {display:none;}
+/*.mePage, .content, .landing {display:none;}*/
 .me .mePage, .samp .content, .homey .landing {display:block;}
 
 /* GLOBALS */

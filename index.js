@@ -1,5 +1,22 @@
-angular.module("index",[])
+angular.module("index",["ngRoute"])
+	.config(function($routeProvider) {
+		$routeProvider.when("/home",{
+			templateUrl:"templates/home.html"
+		});
+		$routeProvider.when("/about",{
+			templateUrl:"templates/about.html"
+		});
+		$routeProvider.when("/portfolio",{
+			templateUrl:"templates/portfolio.html"
+		});
+		$routeProvider.otherwise({
+			redirectTo:"/home"
+		});
+		
+	})
 	.controller("main", function($scope) {
+		
+		
 		
 		$scope.screenTransition = function(event) { //TODO : MOVE THIS INTO A DIRECTIVE AT SOME POINT!
 			var $ele = $(event.target);

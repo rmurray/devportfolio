@@ -9,6 +9,12 @@ angular.module("index",["ngRoute"])
 		$routeProvider.when("/portfolio",{
 			templateUrl:"templates/portfolio.html"
 		});
+		$routeProvider.when("/codesamples",{
+			templateUrl:"templates/codesamples.html"
+		});
+		$routeProvider.when("/references",{
+			templateUrl:"templates/references.html"
+		});
 		$routeProvider.otherwise({
 			redirectTo:"/home"
 		});

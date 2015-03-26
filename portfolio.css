@@ -50,12 +50,15 @@ a.blockLink	{text-decoration:none; cursor:pointer;} /* used for #! anchors. IE n
 footer {height:auto; width:100%; background-color:#f27620; color:#ffffff; padding:0.5em; margin:0.4em 0 0 0; clear:both;}
 
 /*HOME*/
-.landing {color:#777777; text-align:center;}
+.category {position:relative;} /*remove this with .comingSoon*/
+.comingSoon {position:absolute; top:50%; left:0; right:0; z-index:2; padding:10px; background:ivory;}
+.landing, .category {color:#777777; text-align:center;}
 .headline {font-size:2em; padding:0.1em 0 0 0;}
 .underHeadline {font-size:1.1em; padding:0 1em;}
 .catTitle {margin:0 0 10px 0; font-size:1.2em;}
-.category {width:200px; margin:1.5em 2% 0 2%; display:inline-block; vertical-align:top;}
+.category {width:200px; margin:1.5em 2% 0 2%; display:inline-block; vertical-align:top;  text-decoration:none;}
 .category .graphic {height:200px; background-color:#f27620;}
+.portCont {height:200px; background-color:#f27620;}
 .codeSample {color:#ffffff; font-size:700%; background-color:#000000;} /*4a7c1d*/
 
 /* CONTENT */
@@ -144,7 +147,7 @@ footer {height:auto; width:100%; background-color:#f27620; color:#ffffff; paddin
 	.category {width:200px; margin:1.5em 2%;}
 	.catTitle {font-size:1.1em;}
 	.category {width:150px;}
-	.category .graphic {height:150px;}
+	.category .graphic, .portCont {height:150px;}
 
 	.logoCont {font-size:2em; padding:0.1em;}
 	.content {max-height:130em; overflow:hidden; transition:max-height 2s;}
@@ -229,8 +232,8 @@ footer {height:auto; width:100%; background-color:#f27620; color:#ffffff; paddin
 	.headline {font-size:4em; padding:1.5em 0 0 0;}
 	.underHeadline {font-size:2em;}
 	.category {width:200px;}
-	.category .graphic {height:200px;}
 	.catTitle {font-size:1.2em;}
+	.category .graphic, .portCont {height:200px;}
 	
 	.siteContainer {width:30%; max-height:18.75em; min-height:18.7em; padding:1em 0; margin:1.2em 1% 0 1%; opacity:1;}
 	.hide.siteContainer {min-height:0; height:0; width:0; opacity:0; margin:0; padding:0;}
@@ -264,7 +267,7 @@ footer {height:auto; width:100%; background-color:#f27620; color:#ffffff; paddin
 		@-ms-keyframes "blink" { from,to { color: transparent;}  50% { color:#ffffff; } }
 		@-o-keyframes "blink" { from,to { color: transparent;}  50% { color:#ffffff; } }
 	.category.testi {position:relative;}
-	.category:hover .port {transform:rotate(360deg); transition:transform 0.2s;}
+	.category:hover .portCont .port {transform:rotate(360deg); transition:transform 0.1s;}
 	.testi .comment {height:4px; left:85px; position:absolute; top:130px; width:0; background:#f27620;}
 	.category.testi:hover .comment1 {height:4px; left:87px; position:absolute; top:130px; width:70px; background:#f27620; transition:width 0.3s;}
 	.category.testi:hover .comment2 {height:4px; left:87px; position:absolute; top:140px; width:70px; background:#f27620; transition:width 0.3s 0.3s;}

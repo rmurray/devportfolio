@@ -47,7 +47,20 @@ a.blockLink	{text-decoration:none; cursor:pointer;} /* used for #! anchors. IE n
 .gplus {background-position:-179px 0}
 
 /* FOOTER */
-footer {height:auto; width:100%; background-color:#f27620; color:#ffffff; padding:0.5em; margin:0.4em 0 0 0; clear:both;}
+footer {height:auto; width:100%; background-color:#f27620; color:#ffffff; padding:0.5em; clear:both; text-align:center; font-family:orbitron;}
+footer a {display:block; padding:0 0 4px 0; color:#ffffff; text-decoration:none;}
+footer .mid {text-align:center;}
+footer .seperator {display:none;}
+.fSocialIcon {width:50px; height:50px; margin:10px; background-color:#777777; display:inline-block; background-position:-300px -200px;}
+.fLinkedin {background-position:-150px -200px;}
+.fGplus {background-position:-100px -200px;}
+.fEmail {background-position:-200px -200px;}
+.poweredBy {margin:10px 0;}
+.pbIcon {width:50px; height:50px; margin:4px; display:inline-block; background-position:0 0;}
+.pbIcon.angular {background-position:-200px -150px;}
+.pbIcon.jquery {background-position:-391px 0px; top: 49.5%;}
+.pbIcon.html {background-position:-441px 0px; top: 54.5%;}
+.pbIcon.css{background-position:-170px -50px; top: 59.5%;}
 
 /*HOME*/
 .category {position:relative;} /*remove this with .comingSoon*/
@@ -137,11 +150,19 @@ footer {height:auto; width:100%; background-color:#f27620; color:#ffffff; paddin
 */
 
 @media screen and (min-width:640px) {
+	footer .fcont {width:32%; margin:1em 2%; display:inline-block; vertical-align:top;}
+	footer .left {width:22%; text-align:left; padding:10px 0 0 0;}
+	footer .right {text-align:center;}
+	footer .seperator {display:block; clear:both;}
+	.poweredBy {margin:0;}
 	.mainImg {width:40%; float:left; margin:0 1em 1em 0;}
 	.underHeadline {padding:0;}
 }
 
 @media screen and (min-width:768px) {
+	footer .fcont {width:26%;}
+	
+	
 	.headline {font-size:3em; padding:0.3em 0 0 0;}
 	.underHeadline {font-size:1.7em;}
 	.category {width:200px; margin:1.5em 2%;}
@@ -227,7 +248,16 @@ footer {height:auto; width:100%; background-color:#f27620; color:#ffffff; paddin
 }
 
 @media screen and (min-width:1080px) {
-	footer {margin:0.7em 0 0 0;}
+	footer {font-size:1.4em;}
+	footer a {padding:0 0 0.4em 0;}
+	.fSocialIcon {width:80px; height:80px; background-position:0 -250px;}
+	.fLinkedin {background-position:-80px -250px;}
+	.fGplus {background-position:-160px -250px;}
+	.fEmail {background-position:-240px -250px;}
+	footer .right {vertical-align:bottom;}
+	.poweredBy {margin:0; font-size:0.7em;}
+	.pbIcon {margin:20px 4px 0 4px;}
+	.pbIconCont .seperator {display:none;}
 	
 	.headline {font-size:4em; padding:1.5em 0 0 0;}
 	.underHeadline {font-size:2em;}

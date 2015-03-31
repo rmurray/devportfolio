@@ -149,6 +149,11 @@ footer .seperator {display:none;}
 .meThird {width:100%; padding:1em; background-color:#777777; color:#f27620;}
 */
 
+/*ACCOLADES*/
+.label {width:60%; margin:1em auto; font-size:1.3em; color:#222222; text-align:center;}
+.text {display:none; margin:0 auto; overflow:hidden;}
+.text img {border:1px solid #cccccc; margin:1em 0;}
+
 @media screen and (min-width:640px) {
 	footer .fcont {width:32%; margin:1em 2%; display:inline-block; vertical-align:top;}
 	footer .left {width:22%; text-align:left; padding:10px 0 0 0;}

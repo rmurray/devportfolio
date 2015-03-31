@@ -12,8 +12,8 @@ angular.module("index",["ngRoute"])
 		$routeProvider.when("/codesamples",{
 			templateUrl:"templates/codesamples.html"
 		});
-		$routeProvider.when("/references",{
-			templateUrl:"templates/references.html"
+		$routeProvider.when("/accolades",{
+			templateUrl:"templates/accolades.html"
 		});
 		$routeProvider.otherwise({
 			redirectTo:"/home"
@@ -22,7 +22,21 @@ angular.module("index",["ngRoute"])
 	})
 	.controller("main", function($scope) {
 		
-		
+		$scope.accordion = function(event) {
+			var $ele = $(event.target);
+			if($("[data-accordion='content']",$ele).hasClass("opened")) { 
+				//for now do nothing in this event, a slide will always be open. Uncomment below to close a slide that is open when clicked. 
+				//$("[data-accordion='content']",$ele).removeClass("opened").slideUp(); console.log("Just in the if...");
+			}
+			else{
+		console.log("Did we make it in here?");
+				$("[data-accordion='content']",$ele.parent()).each(function() {
+					if($(this).hasClass("opened")) { $(this).removeClass("opened").slideUp(); }
+				});
+				$("[data-accordion='content']",$ele).slideDown().addClass("opened");
+				setTimeout(function(){$('html, body').animate({ scrollTop: $ele.offset().top}, 200);},450);
+			}
+		}
 		
 		$scope.screenTransition = function(event) { //TODO : MOVE THIS INTO A DIRECTIVE AT SOME POINT!
 			var $ele = $(event.target);

@@ -34,6 +34,17 @@ angular.module("index",["ngRoute"])
 			}
 		}
 		
+		$scope.toggleGroup = function(event) {
+			var $ele = $(event.target);
+			var $parent = $ele.closest("[data-transition='parent']");
+			var transClass = $ele.attr("data-transition");
+			var removeClass = $ele.attr("data-remove").split("|");
+			for(index in removeClass) {
+				$parent.removeClass(removeClass[index]);
+			}
+			setTimeout(function(){ $parent.addClass(transClass); },0);
+		};
+		
 		$scope.screenTransition = function(event) { //TODO : MOVE THIS INTO A DIRECTIVE AT SOME POINT!
 			var $ele = $(event.target);
 			var container = $ele.attr("data-container"); //property name to identify container element

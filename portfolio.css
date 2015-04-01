@@ -68,7 +68,7 @@ footer .seperator {display:none;}
 .landing, .category {color:#777777; text-align:center;}
 .headline {font-size:2em; padding:0.1em 0 0 0;}
 .underHeadline {font-size:1.1em; padding:0 1em;}
-.catTitle {margin:0 0 10px 0; font-size:1.2em;}
+.catTitle {margin:0 0 10px 0; font-size:1.2em; font-family:orbitron;}
 .category {width:200px; margin:1.5em 2% 0 2%; display:inline-block; vertical-align:top;  text-decoration:none;}
 .category .graphic {height:200px; background-color:#f27620;}
 .portCont {height:200px; background-color:#f27620;}
@@ -277,6 +277,7 @@ footer .seperator {display:none;}
 	.category .graphic, .portCont {height:200px;}
 	
 	.siteContainer {width:30%; max-height:18.75em; min-height:18.7em; padding:1em 0; margin:1.2em 1% 0 1%; opacity:1;}
+	.siteContainer h2:hover {color:#f27620;}
 	.hide.siteContainer {min-height:0; height:0; width:0; opacity:0; margin:0; padding:0;}
 	.notInlineBlock.siteContainer {margin:1.2em 5% 0 5%; display:block;}
 	.dropdown.siteContainer {width:90%; max-height:130em; display:block;}

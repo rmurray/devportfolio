@@ -152,9 +152,11 @@ footer .seperator {display:none;}
 */
 
 /*ACCOLADES*/
-.label {width:60%; margin:1em auto; font-size:1.3em; color:#222222; text-align:center;}
+.accordion {margin:2em 0;}
+.item {width:95%; margin:0.1em auto; font-size:1.3em; text-align:center;}
+.label {padding:1em 0; background-color:#222222; color:#ffffff;}
 .text {display:none; margin:0 auto; overflow:hidden;}
-.text img {border:1px solid #cccccc; margin:1em 0;}
+.text img {border:1px solid #cccccc;}
 
 @media screen and (min-width:640px) {
 	footer .fcont {width:32%; margin:1em 2%; display:inline-block; vertical-align:top;}
@@ -252,6 +254,8 @@ footer .seperator {display:none;}
 	.descriptionCont > ul {padding:0; margin:0 0 1em 0;}
 	.descriptionCont > ul > li {padding-left:15px; text-indent:-15px;}
 	.descriptionCont > ul > li > span {font-weight:bold;}
+	
+	.accordion {margin:6em 0;}
 }
 
 @media screen and (min-width:1080px) {
@@ -290,6 +294,9 @@ footer .seperator {display:none;}
 	.parallax .skills.skillsRight {left:54%;}
 	
 	.hideImg {max-height:10em;}
+	
+	.accordion {margin:4em 0;}
+	.item {width:60%;}
 }
 
 @media screen and (min-width:1081px) {
